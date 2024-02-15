@@ -1,5 +1,11 @@
 on:
     - push
+    - pull_request
 jobs:
       firstjob:
-            
+            runs-on: ubuntu-latest
+            steps:
+                    - name: checking out the code
+                      uses: actions/acheckout@v3
+                    - name: sample script
+                      run: echo "githubactions"
