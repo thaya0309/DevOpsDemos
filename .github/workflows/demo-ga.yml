@@ -1,6 +1,16 @@
 on:
-    - push
-    - pull_request
+   push:
+    # Sequence of patterns matched against refs/heads
+    branches:
+      - main
+      - 'mona/octocat'
+      - 'releases/**'
+
+    # Sequence of patterns matched against refs/heads
+    branches-ignore:
+      - 'mona/octocat'
+      - 'releases/**-alpha'
+
 jobs:
       firstjob:
             runs-on: ubuntu-latest
